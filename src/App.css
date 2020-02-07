@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;  }
+
+
+body {
+  color: #ddd;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+a {text-decoration: none;}
+h1 {
+	font-size: 40px;
+  	font-weight: 700;
+	margin-bottom: 20px;
+  	margin-top: 20px;
+}
+h2 {
+	font-size: 15px;
+  	font-weight: 600;
+	margin-bottom: 30px;
+  	margin-top: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  text-transform: uppercase;
+}
+.container {
+	margin: auto;
+	width: 940px;
+}
+.ul-reset {
+	padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+	list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+nav {
+	background: #0079EF;
+	font-size: 0;
+	position: relative;
+}
+nav > ul > li {
+	display: inline-block;
+  	font-size: 14px;
+  	padding: 0 15px;
+  	position: relative;
+}
+nav > ul > li:first-child {padding-left: 0;}
+nav > ul > li:last-child {padding-right: 0;}
+nav > ul > li > a {
+	color: #fff;
+  	display: block;
+  	position: relative;
+  	padding: 20px 0;
+  	border-bottom: 3px solid transparent;
+}
+nav > ul > li:hover > a {
+	color: #2FD6C3; 
+  	border-bottom: 3px solid #C6179D;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.mega-menu {
+	background: #f0f0f0;
+  	display: none;
+  	left: 0;
+  	position: absolute;
+  	text-align: left;
+  	width: 100%;
+}
+.mega-menu h3 {color: #444;}
+.mega-menu ul {
+	float: left;
+  	margin-bottom: 20px;
+  	margin-right: 40px;
+  	width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+	border-bottom: 1px solid #ddd;
+  	color: #0079EF;
+  	display: block;
+  	padding: 10px 0;
+}
+.mega-menu a:hover {color: #C6179D;}
+
+.droppable {position: static;}
+.droppable > a:after {
+	content: "\f107";
+  	font-family: FontAwesome;
+  	font-size: 12px;
+  	padding-left: 6px;
+  	position: relative;
+  	top: -1px;
+}
+.droppable:hover .mega-menu {display: block;}
+
+
+
+.cf:before,
+.cf:after {
+	content: " "; /* 1 */
+   display: table; /* 2 */
+}
+.cf:after {clear: both;}
+
+#activeFilter {
+  float: right;
+  margin: 12px;
+  font-size: 20px;
+}
+#activeFilter:hover {
+  color: #29CEFF;
 }
 
-.App-link {
-  color: #61dafb;
+.active {
+  color: #E5004C;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inactive {
+  color: #656668;
 }
